@@ -12,8 +12,13 @@ fluidPage(
     tags$link(rel = "stylesheet", type = "text/css", href = "css/style.css")
   ),
   
-  material_card(
-    tags$style(type = "text/css", "#playground_map {height: calc(100vh - 50px) !important;}"),
+  # material_card(
+  #   tags$style(type = "text/css", "#playground_map {height: calc(100vh - 50px) !important;}"),
+  #   leafletOutput("playground_map")
+  # )
+  div(
+    class = "card",
+    tags$style(type = "text/css", "#playground_map {height: calc(100vh - 20px) !important;}"),
     leafletOutput("playground_map")
   )
 )
