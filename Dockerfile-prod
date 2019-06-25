@@ -1,0 +1,63 @@
+FROM rocker/r-ver:3.5.2
+
+#####################################################################
+# System dependencies
+#####################################################################
+
+# install system dependencies
+RUN apt-get update && \
+apt-get install -y libcurl4-openssl-dev libssl-dev python curl
+
+
+
+#####################################################################
+# AWS 
+#####################################################################
+
+# install AWS CLI
+# WORKDIR /root
+# RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+# RUN unzip awscli-bundle.zip
+# RUN ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+
+# copy AWS credentials
+# COPY aws /root/.aws
+
+
+
+#####################################################################
+# Packrat
+#####################################################################
+
+# copy packrat files
+RUN mkdir /root/packrat
+COPY packrat/packrat.* /root/packrat/
+
+# install packrat
+RUN Rscript -e "install.packages('packrat')"
+
+# install R packages
+WORKDIR /root
+RUN Rscript -e "packrat::restore()"
+
+
+
+#####################################################################
+# Project files
+#####################################################################
+
+# copy src files
+COPY src /root/src
+
+
+
+#####################################################################
+# Container entry point
+#####################################################################
+
+# copy container entry point
+# COPY bin/refresh_data.sh /root/bin/refresh_data.sh
+# RUN mkdir -p data
+
+# set entry point
+# CMD ["bin/refresh_data.sh"]

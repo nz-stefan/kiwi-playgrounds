@@ -1,0 +1,12 @@
+name: kiwi-playgrounds
+title: kiwi-playgrounds
+username:
+account: nz-stefan
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 997179
+bundleId: 2176744
+url: https://nz-stefan.shinyapps.io/kiwi-playgrounds/
+when: 1561460015.95897
+asMultiple: FALSE
+asStatic: FALSE
