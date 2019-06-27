@@ -9,6 +9,7 @@
 library(dplyr)
 library(shiny)
 library(leaflet)
+library(shinymaterial)
 
 
 source("utils/ui_utils.R")

@@ -5,8 +5,8 @@ account: nz-stefan
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 997179
-bundleId: 2176771
+bundleId: 2182386
 url: https://nz-stefan.shinyapps.io/kiwi-playgrounds/
-when: 1561460932.4584
+when: 1561633388.12155
 asMultiple: FALSE
 asStatic: FALSE
