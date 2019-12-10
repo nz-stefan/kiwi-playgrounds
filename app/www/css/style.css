@@ -1,3 +1,15 @@
+
+/** Top navigation bar *******************************************************/
+
+nav .brand-logo {
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.5rem;  /* reduce font size a bit, default is too large */
+    padding: 0;
+    white-space: nowrap;
+}
+
 /** Material design cards ****************************************************/
 
 .card {

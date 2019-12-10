@@ -1,7 +1,7 @@
 FROM rocker/rstudio-stable:3.5.2
 
 # install additional system dependencies
-RUN apt-get update && apt-get install -y libxml2-dev zlib1g-dev libgit2-dev libpng-dev
+RUN apt-get update && apt-get install -y libxml2-dev zlib1g-dev libgit2-dev libpng-dev libmariadbclient-dev
 
 
 # set CRAN repo to the RStudio mirror
